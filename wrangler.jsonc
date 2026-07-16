@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kirillanivers",
+  "compatibility_date": "2025-01-01",
+  // Tells `wrangler deploy` to serve the Vite build output as a static site
+  // (no server code needed) — this is what Cloudflare's "Deploy command:
+  // npx wrangler deploy" step reads to find your built files.
+  "assets": {
+    "directory": "./dist"
+  }
+}
