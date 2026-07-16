@@ -148,7 +148,7 @@ export const content: Content = {
       note: "Honey, you know, “La vie en rose” for me was really special song because it’s a song from my favorite tv show “How I met your mother” and for me it always was a symbol of a hope. Hope that one day I will tell my kids the story of how I met their mom, a hope that I will find a person who will understand me with every my complicated side. The person I will want to get older with and spend my whole life. The person I can just be myself with. The person I will see as the love of my life. And when we found each other I wanted you to know this song and what it means to me because I know and I know it for sure: this person is you, baby. Every time I hear it, I don’t just hear the melody, I hear you. I remember the very first time  when you sang it to me, when you learned how to play it in piano, you did it for me, because you knew what it means, when your voice made the whole world go quiet. This song became a place where I can always find you, even when you’re thousands of kilometers away. One day I want to listen to it not through my headphones, but while holding you in my arms. Until then, every note reminds me of you, honey. 🥺🤍",
     },
     playlist: {
-      youtubePlaylistId: "PLR3x7jezwJlM", // optional: a full YouTube playlist ID as fallback
+      youtubePlaylistId: "PLN34l6zsAYDI", // optional: a full YouTube playlist ID as fallback
       tracks: [
         { title: "Track title 1", artist: "Artist name", youtubeId: "" },
         { title: "Track title 2", artist: "Artist name", youtubeId: "" },
