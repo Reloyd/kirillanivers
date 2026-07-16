@@ -1,0 +1,39 @@
+# Example nginx server block for serving the built static site.
+# Copy to /etc/nginx/sites-available/anniversary-site, adjust paths/domain,
+# then: ln -s /etc/nginx/sites-available/anniversary-site /etc/nginx/sites-enabled/
+# and: nginx -t && systemctl reload nginx
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name your-domain.example;
+
+    root /var/www/anniversary-site;   # must match VPS_PATH secret used in deploy.yml
+    index index.html;
+
+    # SPA fallback — any unknown path serves index.html so client-side
+    # routing / deep-linking to a section anchor never 404s.
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Long cache for hashed build assets
+    location /assets/ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Never cache the html or robots.txt
+    location = /index.html {
+        add_header Cache-Control "no-cache";
+    }
+    location = /robots.txt {
+        add_header Cache-Control "no-cache";
+    }
+
+    gzip on;
+    gzip_types text/css application/javascript image/svg+xml;
+}
+
+# Once DNS points at this server, add HTTPS with:
+#   certbot --nginx -d your-domain.example

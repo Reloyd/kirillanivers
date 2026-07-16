@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(58, 46, 46, 0.04) 1px,
+      transparent 0
+    );
+    background-size: 22px 22px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply font-serif text-3xl sm:text-4xl text-wine mb-2;
+  }
+
+  .section-subheading {
+    @apply text-rose-dark/80 text-sm sm:text-base mb-8 italic;
+  }
+
+  .polaroid-frame {
+    @apply bg-white p-3 pb-10 shadow-polaroid rounded-sm relative;
+  }
+}
+
+::selection {
+  background-color: #e8c4c4;
+  color: #4e1d29;
+}
+
+/* Custom scrollbar, subtle */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf6ef;
+}
+::-webkit-scrollbar-thumb {
+  background: #e8c4c4;
+  border-radius: 8px;
+}
