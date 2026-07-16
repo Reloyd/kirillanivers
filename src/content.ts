@@ -95,7 +95,7 @@ export const content: Content = {
     // flip to true when you're ready and the site will show a countdown
     // until anniversaryAt, then unlock itself automatically.
     reveal: {
-      enabled: false,
+      enabled: true,
       at: "2026-07-17T00:00:00+03:00",
     },
   },
